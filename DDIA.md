@@ -1,11 +1,9 @@
-# DDIA → System Design Master Guide
+#  System Design Master Guide
 
-> **Purpose:** A condensed but deep study companion to *Designing
-> Data-Intensive Applications* (DDIA), organized chapter-by-chapter and
-> connected to practical system-design thinking.
+> **Purpose:** My understanding system-design thinking.
 >
 > **Source boundary:** Sections marked **DDIA --- Source** summarize and
-> explain the ideas in the uploaded book. Sections marked **System
+> explain the idea. Sections marked **System
 > Design --- Added** are deliberately additional teaching material:
 > design heuristics, interview structure, diagrams, and practical
 > connections that are not presented as quotations from the book.
