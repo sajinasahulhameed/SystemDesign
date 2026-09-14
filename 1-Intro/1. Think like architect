@@ -1,0 +1,162 @@
+# Thinking Like a System Architect
+
+## Core Idea
+
+### Developer vs Architect
+
+| Developer Thinks | Architect Thinks |
+|-----------------|------------------|
+| How do I build this feature? | What happens when 1 million users use it? |
+| How do I store this data? | What will it cost to store for 5 years? |
+| How do I write clean code? | How do 50 developers maintain this system? |
+| How do I make it work? | How do I make it scalable, reliable, secure, and cost-effective? |
+
+### Key Principle
+
+> Developers optimise code.
+>
+> Architects optimise systems.
+
+---
+
+# Mental Shift #1: Think in Trade-offs, Not Perfection
+
+## Reality
+
+There is no perfect system.
+
+Every architectural decision involves trade-offs.
+
+### Architect's Job
+
+Understand:
+
+- Benefits
+- Drawbacks
+- Business impact
+
+Then choose the option that best fits the context.
+
+---
+
+## Example: Consistency vs Availability
+
+### Consistency
+
+Ensures accurate data.
+
+**Pros**
+
+- Correct transactions
+- No conflicting records
+
+**Cons**
+
+- Potential downtime
+- Lower availability
+
+### Availability
+
+Keeps the system online.
+
+**Pros**
+
+- Better user experience
+- Continuous service
+
+**Cons**
+
+- Temporary inconsistencies
+
+---
+
+### Payment System
+
+**Choose: Consistency**
+
+Reason:
+
+Incorrect payments are unacceptable.
+
+---
+
+### Social Media Feed
+
+**Choose: Availability**
+
+Reason:
+
+Showing slightly old content is better than showing nothing.
+
+---
+
+### Architect Question
+
+Always ask:
+
+> What matters most to the business?
+
+---
+
+# Mental Shift #2: Expect Failure Everywhere
+
+## Developer Thinking
+
+Assumes:
+
+- Database works
+- Network works
+- Services are healthy
+
+Focuses on:
+
+✅ Happy Path
+
+---
+
+## Architect Thinking
+
+Asks:
+
+### Failure Questions
+
+- What if the database crashes?
+- What if the network becomes slow?
+- What if the data centre goes offline?
+- What if a service is overloaded?
+- What if hackers attack?
+- What if API limits are reached?
+
+---
+
+## Golden Rule
+
+For every component ask:
+
+### 1. How can it fail?
+
+### 2. How will we recover?
+
+---
+
+## Ecommerce Example
+
+Payment service fails during checkout.
+
+### Option A
+
+Show error.
+
+**Result**
+
+❌ Lost sales
+
+---
+
+### Option B
+
+Save the order.
+
+Process payment later.
+
+**
